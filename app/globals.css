@@ -1076,7 +1076,7 @@ main > section {
   place-items: center;
   background:
     linear-gradient(120deg, rgba(15, 31, 46, 0.94), rgba(15, 31, 46, 0.86)),
-    url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1800&q=82");
+    url("/assets/thank-you-bg.jpg");
   background-size: cover;
   background-position: center;
   color: var(--white);

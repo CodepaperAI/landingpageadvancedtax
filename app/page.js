@@ -21,13 +21,10 @@ import AnchorStabilizer from "./components/AnchorStabilizer";
 import ConsultationForm from "./components/ConsultationForm";
 
 const logo =
-  "https://advancedtax.com.au/wp-content/uploads/2025/07/advancetax1.png";
-const heroImage =
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=84";
-const teamImage =
-  "https://advancedtax.com.au/wp-content/uploads/2024/08/cheerful-business-team-discussing-project-L7SEHE4-768x864.jpg";
-const reportsImage =
-  "https://advancedtax.com.au/wp-content/uploads/2024/08/financial-report-ZYNX4RM-1536x1024.jpg";
+  "/assets/advancedtax-logo.svg";
+const heroImage = "/assets/hero-office.jpg";
+const teamImage = "/assets/business-team.jpg";
+const reportsImage = "/assets/accounting-reports.jpg";
 
 const trustItems = [
   "Registered Tax Professionals",
