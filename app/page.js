@@ -266,6 +266,9 @@ export default function Home() {
                 Spend less time on bookkeeping and more time growing your
                 business.
               </p>
+              <p className="hero-location">
+                Our offices are located in Parramatta and Sydney, Australia.
+              </p>
               <p className="hero-body">
                 AdvancedTax helps small businesses stay compliant, organised,
                 and financially confident with expert accounting, BAS,

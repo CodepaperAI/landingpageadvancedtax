@@ -316,6 +316,19 @@ main > section {
   font-weight: 800;
 }
 
+.hero-location {
+  width: fit-content;
+  margin-top: 14px;
+  border-left: 3px solid var(--gold);
+  background: rgba(15, 31, 46, 0.38);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.98rem;
+  font-weight: 850;
+  line-height: 1.45;
+}
+
 .hero-body {
   margin-top: 14px;
   max-width: 720px;
