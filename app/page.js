@@ -23,7 +23,7 @@ import ConsultationForm from "./components/ConsultationForm";
 const logo =
   "/assets/advancedtax-logo.svg";
 const heroImage = "/assets/hero-office.jpg";
-const teamImage = "/assets/business-team.jpg";
+const teamImage = "/assets/tax-documents.jpg";
 const reportsImage = "/assets/accounting-reports.jpg";
 
 const trustItems = [
@@ -38,6 +38,15 @@ const heroChecks = [
   "BAS, payroll & tax handled for you",
   "Dedicated support for small businesses",
   "Fast, reliable & ATO-compliant service",
+];
+
+const heroQuestions = [
+  "Behind on BAS or tax returns?",
+  "ATO debt keeping you awake at night?",
+  "Bookkeeping not up to date?",
+  "Not sure where your cash is going?",
+  "Need payroll and super sorted properly?",
+  "Need financials for a bank or loan application?",
 ];
 
 const painPoints = [
@@ -263,17 +272,21 @@ export default function Home() {
               <p className="eyebrow">Small business accounting support</p>
               <h1>Accounting Made Simple for Small Businesses</h1>
               <p className="hero-lede">
-                Spend less time on bookkeeping and more time growing your
-                business.
+                Get your family time back!
               </p>
               <p className="hero-location">
-                Our office is located in Parramatta.
+                Offices in Parramatta and Liverpool, supporting businesses Australia-wide.
               </p>
+              <div className="hero-prompts" aria-label="Common business accounting problems">
+                {heroQuestions.map((question) => (
+                  <span key={question}>{question}</span>
+                ))}
+              </div>
               <p className="hero-body">
-                AdvancedTax helps small businesses stay compliant, organised,
-                and financially confident with expert accounting, BAS,
-                bookkeeping, payroll, and tax support all tailored for
-                Australian businesses.
+                We help business owners get back on track with tax,
+                accounting, business tax advice, SMSF, BAS, bookkeeping,
+                payroll, ATO matters and compliance, so they can focus on
+                running and scaling their business.
               </p>
               <CheckList items={heroChecks} variant="hero" />
               <div className="hero-actions">
@@ -422,7 +435,7 @@ export default function Home() {
         <section className="why-section section-pad" id="why-us">
           <div className="container why-grid">
             <div className="why-image">
-              <img src={teamImage} alt="AATBS team reviewing client work" />
+              <img src={teamImage} alt="Accounting documents and tax paperwork" />
             </div>
             <div className="why-copy">
               <SectionHeading
