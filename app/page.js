@@ -267,7 +267,7 @@ export default function Home() {
                 business.
               </p>
               <p className="hero-location">
-                Our offices are located in Parramatta and Sydney, Australia.
+                Our office is located in Parramatta.
               </p>
               <p className="hero-body">
                 AdvancedTax helps small businesses stay compliant, organised,
