@@ -8,7 +8,6 @@ import {
   Check,
   CircleDollarSign,
   Clock3,
-  Cloud,
   FileCheck2,
   MessageCircle,
   ReceiptText,
@@ -67,34 +66,54 @@ const risks = [
 
 const services = [
   {
-    icon: BookOpenCheck,
-    title: "Bookkeeping",
-    copy: "Stay organised with accurate financial records and real-time tracking.",
+    icon: ReceiptText,
+    title: "Tax Returns & Tax Planning",
+    copy: "Plan ahead, reduce surprises, and maximise available deductions legally.",
   },
   {
     icon: FileCheck2,
-    title: "BAS Preparation & Lodgement",
-    copy: "Avoid ATO stress with accurate and on-time BAS submissions.",
+    title: "BAS & GST Compliance",
+    copy: "Stay on top of BAS, GST reporting, and lodgements with ATO-compliant support.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "ATO Debt & Payment Arrangements",
+    copy: "Get practical help understanding your options and managing ATO pressure.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Business Advisory Services",
+    copy: "Make clearer business decisions with practical financial guidance.",
+  },
+  {
+    icon: BarChart3,
+    title: "Cash Flow Forecasting",
+    copy: "Understand where cash is going and plan ahead with better visibility.",
+  },
+  {
+    icon: BookOpenCheck,
+    title: "Business Structure Advice",
+    copy: "Review your setup and choose structures that support your next stage.",
+  },
+  {
+    icon: CircleDollarSign,
+    title: "Finance & Loan Application Support",
+    copy: "Prepare reliable financial information for banks, brokers, and lenders.",
+  },
+  {
+    icon: Banknote,
+    title: "SMSF Administration",
+    copy: "Keep SMSF records, compliance, and administration moving with confidence.",
   },
   {
     icon: BriefcaseBusiness,
     title: "Payroll & Superannuation",
-    copy: "Keep your employees paid correctly and stay compliant.",
+    copy: "Keep employees paid correctly while staying compliant with super and STP.",
   },
   {
-    icon: ReceiptText,
-    title: "Tax Returns & Tax Planning",
-    copy: "Reduce surprises and maximise available deductions legally.",
-  },
-  {
-    icon: BarChart3,
-    title: "Cash Flow & Financial Reporting",
-    copy: "Understand where your money is going and make smarter business decisions.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Accounting Support",
-    copy: "We work with modern accounting platforms to simplify your finances.",
+    icon: Sparkles,
+    title: "Research & Development (R&D) Tax Incentives",
+    copy: "Identify and prepare eligible R&D tax incentive opportunities properly.",
   },
 ];
 
@@ -160,19 +179,22 @@ const steps = [
 
 const testimonials = [
   {
-    quote: "Professional, reliable, and incredibly easy to work with.",
-    copy: "AdvancedTax helped us streamline our bookkeeping and finally understand our cash flow properly.",
-    author: "Small Business Owner",
+    quote:
+      "We approached the team when we were struggling with overdue tax obligations and increasing pressure from the ATO. They provided clear advice, helped us understand our options and guided us through the process professionally. Their support gave us confidence and allowed us to focus on running the business again.",
+    author: "Jaggy Kehal",
+    business: "Jaggy & Sons",
   },
   {
-    quote: "Tax season became stress-free.",
-    copy: "Their team handles everything on time and keeps us compliant without the headaches.",
-    author: "Local Business Client",
+    quote:
+      "The team goes beyond preparing tax returns. They take the time to understand our business, explain the financial implications of key decisions and provide practical guidance throughout the year. Their proactive approach has helped us make better business decisions and plan for growth.",
+    author: "Neil Raweri",
+    business: "Advanced Century Technologies Pty Ltd",
   },
   {
-    quote: "Feels like having an accounting partner.",
-    copy: "They genuinely care about helping our business grow, not just filing paperwork.",
-    author: "Service-Based Business Owner",
+    quote:
+      "We needed reliable accountants who were responsive, knowledgeable and genuinely interested in our success. Whether it was tax planning, financial reporting, dealing with the ATO or preparing information for finance applications, the service has always been professional and timely. We highly recommend them to any business owner looking for trusted accounting support.",
+    author: "Siva Velayuthan",
+    business: "Techants Solutions Pty Ltd",
   },
 ];
 
@@ -302,6 +324,10 @@ export default function Home() {
                 ATO-compliant service
               </div>
               <div className="metric-row">
+                <strong>20+</strong>
+                <span>Years of experience supporting Australian businesses</span>
+              </div>
+              <div className="metric-row">
                 <strong>BAS</strong>
                 <span>On-time preparation and lodgement</span>
               </div>
@@ -399,10 +425,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="service-grid">
-                {services.map(({ icon: Icon, title, copy }) => (
+                {services.map(({ icon: Icon, title, copy }, index) => (
                   <article className="service-card" key={title}>
-                    <div className="icon-box">
-                      <Icon size={22} />
+                    <div className="service-card-top">
+                      <div className="icon-box">
+                        <Icon size={22} />
+                      </div>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <h3>{title}</h3>
                     <p>{copy}</p>
@@ -485,9 +514,11 @@ export default function Home() {
             <div className="testimonial-grid">
               {testimonials.map((item) => (
                 <figure className="testimonial" key={item.quote}>
-                  <blockquote>“{item.quote}”</blockquote>
-                  <p>{item.copy}</p>
-                  <figcaption>— {item.author}</figcaption>
+                  <blockquote>&ldquo;{item.quote}&rdquo;</blockquote>
+                  <figcaption>
+                    {item.author}
+                    <span>{item.business}</span>
+                  </figcaption>
                 </figure>
               ))}
             </div>
