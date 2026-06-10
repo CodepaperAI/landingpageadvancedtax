@@ -38,13 +38,6 @@ const industryItems = [
   "Self-Managed Super Funds",
 ];
 
-const heroChecks = [
-  "Fixed & transparent pricing",
-  "BAS, payroll & tax handled for you",
-  "Dedicated support for small businesses",
-  "Fast, reliable & ATO-compliant service",
-];
-
 const heroQuestions = [
   "Behind on BAS or tax returns?",
   "ATO debt keeping you awake at night?",
@@ -54,11 +47,12 @@ const heroQuestions = [
   "Need financials for a bank or loan application?",
 ];
 
-const painPoints = [
-  "Time-consuming",
-  "Confusing",
-  "Stressful",
-  "Easy to fall behind on",
+const heroCredentials = [
+  "20+ Years Industry Experience",
+  "Business Tax & Growth Specialists",
+  "Offices in Parramatta & Liverpool",
+  "Australia-Wide Online Service",
+  "Tax, Accounting & Lending Under One Roof",
 ];
 
 const risks = [
@@ -302,21 +296,12 @@ export default function Home() {
               <p className="hero-lede">
                 Get your family time back!
               </p>
-              <p className="hero-location">
-                Offices in Parramatta and Liverpool, supporting businesses Australia-wide.
-              </p>
-              <div className="hero-prompts" aria-label="Common business accounting problems">
-                {heroQuestions.map((question) => (
-                  <span key={question}>{question}</span>
-                ))}
-              </div>
               <p className="hero-body">
                 We help business owners get back on track with tax,
                 accounting, business tax advice, SMSF, BAS, bookkeeping,
                 payroll, ATO matters and compliance, so they can focus on
                 running and scaling their business.
               </p>
-              <CheckList items={heroChecks} variant="hero" />
               <div className="hero-actions">
                 <a className="button button-gold" href="#consultation">
                   Book Your Free Consultation
@@ -327,28 +312,16 @@ export default function Home() {
             <aside className="hero-panel" aria-label="AdvancedTax trust summary">
               <div className="panel-topline">
                 <BadgeCheck size={20} />
-                ATO-compliant service
+                Why businesses choose AdvancedTax
               </div>
-              <div className="metric-row">
-                <strong>20+</strong>
-                <span>Years of experience supporting Australian businesses</span>
-              </div>
-              <div className="metric-row">
-                <strong>BAS</strong>
-                <span>On-time preparation and lodgement</span>
-              </div>
-              <div className="metric-row">
-                <strong>Payroll</strong>
-                <span>Accurate pay runs, super and STP support</span>
-              </div>
-              <div className="metric-row">
-                <strong>Tax</strong>
-                <span>Planning, returns and practical guidance</span>
-              </div>
-              <div className="panel-note">
-                Built for sole traders, tradies, consultants, cafes, retailers,
-                service businesses and growing teams.
-              </div>
+              <ul className="credential-list">
+                {heroCredentials.map((credential) => (
+                  <li key={credential}>
+                    <Check size={16} strokeWidth={3} />
+                    <span>{credential}</span>
+                  </li>
+                ))}
+              </ul>
             </aside>
           </div>
         </section>
@@ -376,10 +349,10 @@ export default function Home() {
             />
             <div className="problem-content">
               <div className="problem-card">
-                <h3>For many small business owners, accounting becomes:</h3>
+                <h3>We can help if:</h3>
                 <div className="tag-grid">
-                  {painPoints.map((point) => (
-                    <span key={point}>{point}</span>
+                  {heroQuestions.map((question) => (
+                    <span key={question}>{question}</span>
                   ))}
                 </div>
               </div>
