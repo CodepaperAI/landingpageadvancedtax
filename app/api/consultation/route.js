@@ -20,7 +20,7 @@ function buildEmailHtml(data) {
     ["Name", data.name],
     ["Phone", data.phone],
     ["Email", data.email],
-    ["Business type", data.businessType],
+    ["Industry", data.businessType],
     ["Service", data.service],
     ["Message", data.message || "No message provided"],
   ];
@@ -56,7 +56,7 @@ function buildEmailText(data) {
     `Name: ${data.name}`,
     `Phone: ${data.phone}`,
     `Email: ${data.email}`,
-    `Business type: ${data.businessType}`,
+    `Industry: ${data.businessType}`,
     `Service: ${data.service}`,
     `Message: ${data.message || "No message provided"}`,
   ].join("\n");

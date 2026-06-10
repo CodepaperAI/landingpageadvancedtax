@@ -13,6 +13,19 @@ const initialForm = {
   message: "",
 };
 
+const industryOptions = [
+  "Trades & Construction",
+  "Retail & E-commerce",
+  "Hospitality & Cafés",
+  "Professional Services",
+  "Consultants & Contractors",
+  "Medical & Healthcare",
+  "Property Investors & Developers",
+  "Transport & Logistics",
+  "Franchise Businesses",
+  "Self-Managed Super Funds",
+];
+
 export default function ConsultationForm() {
   const router = useRouter();
   const [form, setForm] = useState(initialForm);
@@ -107,7 +120,7 @@ export default function ConsultationForm() {
         </label>
 
         <label>
-          Business type
+          Industry
           <select
             name="businessType"
             value={form.businessType}
@@ -115,13 +128,9 @@ export default function ConsultationForm() {
             required
           >
             <option value="">Select one</option>
-            <option>Sole trader</option>
-            <option>Startup</option>
-            <option>Tradie</option>
-            <option>Cafe or hospitality</option>
-            <option>Retail</option>
-            <option>Consulting or services</option>
-            <option>Growing company</option>
+            {industryOptions.map((industry) => (
+              <option key={industry}>{industry}</option>
+            ))}
           </select>
         </label>
 

@@ -25,11 +25,17 @@ const heroImage = "/assets/hero-office.jpg";
 const teamImage = "/assets/tax-documents.jpg";
 const reportsImage = "/assets/accounting-reports.jpg";
 
-const trustItems = [
-  "Registered Tax Professionals",
-  "Cloud Accounting Experts",
-  "Fast Response Times",
-  "Personalised Business Support",
+const industryItems = [
+  "Trades & Construction",
+  "Retail & E-commerce",
+  "Hospitality & Cafés",
+  "Professional Services",
+  "Consultants & Contractors",
+  "Medical & Healthcare",
+  "Property Investors & Developers",
+  "Transport & Logistics",
+  "Franchise Businesses",
+  "Self-Managed Super Funds",
 ];
 
 const heroChecks = [
@@ -349,12 +355,9 @@ export default function Home() {
 
         <section className="trust-bar" aria-label="Trust signals">
           <div className="container trust-grid">
-            <p>
-              Trusted by Australian small businesses across trades, retail,
-              hospitality, consulting & service industries.
-            </p>
+            <p>Trusted by Australian businesses across:</p>
             <div>
-              {trustItems.map((item) => (
+              {industryItems.map((item) => (
                 <span key={item}>
                   <Check size={15} strokeWidth={3} />
                   {item}
