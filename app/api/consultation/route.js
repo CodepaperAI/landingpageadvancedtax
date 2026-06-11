@@ -107,7 +107,7 @@ export async function POST(request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
   const from = process.env.RESEND_FROM_EMAIL || "AdvancedTax <consultation@updates.advancedtax.com.au>";
-  const to = process.env.RESEND_TO_EMAIL || "accountants@advancedtax.com.au";
+  const to = process.env.RESEND_TO_EMAIL || "araweri@advancedtax.com.au";
 
   try {
     await resend.emails.send({
