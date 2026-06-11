@@ -564,6 +564,9 @@ export default function Home() {
           <div>
             <span>Contact</span>
             <a href="tel:0297340777">02 9734 0777</a>
+            <a href="mailto:accountants@advancedtax.com.au">
+              accountants@advancedtax.com.au
+            </a>
             <a href="#consultation">Book consultation</a>
           </div>
         </div>
